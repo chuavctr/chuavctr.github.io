@@ -1,186 +1,221 @@
-<!DOCTYPE HTML>
-<!--
-	Victor Chua's Portfolio
-	Template Derived from:
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Victor Chua</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload">
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor's Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts - Futura-like font -->
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevents vertical scrollbar */
+      font-family: 'Parkinsans', sans-serif;
+      color: #ccd6f6; /* Light grayish-blue */
+    }
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Victor Chua</a></h1>
+    /* Scrolling Background */
+    .scrolling-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300%; /* Increase width to match the longer image */
+      height: 100vh; /* Full viewport height */
+      background-image: url('images/Card.png');
+      background-size: auto 100%; /* Scale height to fit screen */
+      background-repeat: repeat-x; /* Repeat horizontally */
+      z-index: -1; /* Place behind other content */
+    }
 
-					</header>
+    /* Profile Card */
+    .profile-card {
+      margin-top: 50px;
+      padding: 40px 30px;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #112240, #0a192f); /* Gradient for depth */
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
+      position: relative; /* Ensures card stays above the background */
+      z-index: 1; /* Places card above the scrolling background */
+    }
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Victor Chua Min Chun</h2>
-							<p>Bachelor in Comp Sci (Hons)<br />
-							Data Sci Major<br />
-								Kuala Lumpur Malaysia
-							</p>
-							<nav>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/victor-chuaa/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/chuavctr/portfolio" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									<li><a href="mailto:chua.vctr@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-								</ul>
-							</nav>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+    /* Profile Picture */
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%; /* Circle frame */
+      object-fit: cover; /* Ensures the image fits perfectly */
+      margin-bottom: 20px; /* Space between image and text */
+    }
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Hello! I'm Victor.</h2>
-								<p>I'm Currently a Third Year student under the Bachelor of Computer Science (Hons) at UOW Malaysia KDU.<br />
-									I spend most of my time looking into data science related topics, and elevating the campus experience for my university school's community during the pandemic. </p>
-							</header>
-						</div>
-					</section>
+    /* Profile Info */
+    .profile-info {
+      text-align: center; /* Center-align everything */
+    }
+    .profile-info h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #64ffda; /* Bright teal for the name */
+      letter-spacing: 2px; /* Adds a modern touch */
+      margin-bottom: 5px;
+    }
+    .profile-info h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #64ffda; /* Bright teal for the name */
+      letter-spacing: 2px; /* Adds a modern touch */
+      margin-bottom: 5px;
+    }
+    .profile-info p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #8892b0; /* Lighter gray for the role */
+      margin-bottom: 10px;
+    }
 
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>COVID Misinformation <br/> Prevention Bot </h2>
-								<p>Final Year Project <br/>Provides information based on user statements
-									<ul>
-										<li>
-											SVM Classification
-										</li>
-										<li>
-											Keyword Extraction (Keybert)
-										</li>
-										<li>
-											News Querying (PyGoogleNews)
-										</li>
-									</ul>
-								</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Covid-19 in Malaysia: <br />
-								Effectiveness in MCO Phases</h2>
-								<p>A study on the effectiveness of early phases of Malaysia's Movement Control Order <br/>
-									<ul>
-										<li>
-											Linear Regression
-										</li>
-										<li>
-											Logistic Regression
-										</li>
-									</ul></p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Crowd Detection System</h2>
-								<p>Prototype on monitoring crowd traffic based on bluetooth signals <br/><ul>
-										<li>
-											Designed System Functionalities
-										</li>
-										<li>
-											Prototyped IoT system for data collection
-										</li>
-										<li>
-											Asia Pacific ICT Alliance Awards (APICTA) shortlisted team (2020)
-										</li>
-									</ul></p>
-							</div>
-						</section>
-					</section>
+    /* Contact Links */
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      justify-content: center; /* Center-align links */
+      gap: 20px; /* Space between links */
+      margin-top: 10px;
+    }
+    .contact-link {
+      display: flex; /* Group icon and text together */
+      align-items: center; /* Align icon and text vertically */
+      gap: 5px; /* Space between icon and text */
+      text-decoration: none;
+      color: #64ffda; /* Bright teal for links */
+      font-size: 1rem;
+      transition: none; /* No hover effects */
+    }
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h3>Leadership experience</h3><br/>
-								<img class="center-fit" src="images/DICE Hor.png" alt="" width="600" />
-								<p>Student Body & School Club<br /> School of Computing & Creative Media (SCCM) <br/>
-								Co-Founder, President<br/> Mar 2020 - Dec 2021</p>
-							</header>
-							<ul class="features">
-								<li class="icon fa-solid fa-flag">
-									<div><h3>Jingle Mingle 2021</h3><p>School's Annual Flagship Event</p></div>
-									<p>Directed & Produced event stream showcasing student works across multiple school programmes</p>
-								</li>
-								<li class="icon solid fa-microphone">
-									<h3>Today on Friday</h3>
-									<p>Spearheaded a new podcast series on school-related topics featuring students, lecturers, alumni & industry guests</p>
-								</li>
-								<li class="icon solid fa-fighter-jet">
-									<h3>UOWMKDU MLBB Virtual Competition</h3>
-									<p>Collaborated with university's Games, Anime & Youth Association (GAYA) to host an E-Sports tourney for 160 High School Participants across Malaysia</p>
-								</li>
-								<li class="icon solid fa-pen">
-									<h3>Comic Jam 2021</h3>
-									<p>Showcased School's Sequential Arts Programme by organizing workshops on comic creation for students across different programmes within School</p>
-								</li>
-								<li class="icon fa-heart">
-									<h3>Club Fundraising</h3>
-									<p>Coordinated online sales & logistics for club shirt in order to raise funds for club via contactless delivery</p>
-								</li>
-								<li class="icon fa-flag">
-									<div><h3>Jingle Mingle 2020</h3><p>School's Annual Flagship Event</p></div>
-									<p>Streamlined physical event into an online showcase on Discord, featuring local industry guests from Metronomik, Larian Studios, Streamline Studios etc.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+    /* Stack Icons */
+    .stack-icons {
+      display: flex;
+      justify-content: center; /* Center-align icons horizontally */
+      align-items: center; /* Align icons vertically */
+      gap: 20px; /* Space between icons */
+      margin-top: 20px;
+    }
+    .stack-icons i {
+      font-size: 2.5rem; /* Font Awesome icon size */
+      width: 40px; /* Match width with PNGs */
+      height: 40px; /* Match height with PNGs */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64ffda; /* Bright teal for Font Awesome icons */
+    }
+    .stack-icons img {
+      width: 40px; /* Fixed size for PNGs */
+      height: 40px; /* Fixed size for PNGs */
+      object-fit: contain; /* Ensures PNGs fit within the box */
+    }
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Get to know more</h2>
-								<p>Reach out to me on LinkedIn, or check out my portfolio!</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="https://www.linkedin.com/in/victor-chuaa/" class="button fit primary">LinkedIn</a></li>
-								<li><a href="https://drive.google.com/file/d/10ZmkXBHrHuf8oGWIL9lRtyLnArQjEt8z/view?usp=sharing" class="button fit">Portfolio</a></li>
-							</ul>
-						</div>
-					</section>
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .profile-card {
+        padding: 30px 20px;
+        max-width: 600px; /* Adjust card width for smaller screens */
+      }
+      .profile-card h1 {
+        font-size: 2rem;
+      }
+      .profile-card h2 {
+        font-size: 1.5rem;
+      }
+      .profile-card p {
+        font-size: 1rem;
+      }
+      .stack-icons i,
+      .stack-icons img {
+        width: 30px; /* Smaller size for smaller screens */
+        height: 30px;
+        font-size: 2rem; /* Adjust Font Awesome icon size for smaller screens */
+      }
+      .contact-link {
+        flex-direction: row; /* Keep icon and text side-by-side */
+        gap: 5px; /* Maintain spacing */
+        font-size: 0.9rem; /* Reduce font size for better fit */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Scrolling Background -->
+  <div class="scrolling-background"></div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/victor-chuaa/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/chuavctr/portfolio" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="mailto:chua.vctr@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Victor Chua</li><li>Thanks for dropping by!</a></li>
-						</ul>
-					</footer>
+  <!-- Profile Card -->
+  <div class="container text-center">
+    <div class="profile-card">
+      <div class="profile-info">
+        <img src="images/pic04.jpg" alt="Profile Picture" class="profile-picture">
+        <h1>Victor Chua</h1>
+        <h2>蔡旻錞</h2>
+        <p class="lead">Data Engineer</p>
+        <div class="contact-links">
+          <a href="tel:+60126631797" class="contact-link">
+            <i class="fa-solid fa-phone"></i> Contact
+          </a>
+          <a href="mailto:chua.vctr@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i> chua.vctr@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/victor-chuaa/" target="_blank" class="contact-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://medium.com/@chua.vctr" class="contact-link">
+            <i class="fa-brands fa-medium"></i> Medium
+          </a>
+        </div>
+      </div>
+      <hr>
+      <div class="stack-icons mt-4">
+        <i class="fab fa-aws" title="AWS"></i>
+        <img src="images/azure.png" alt="Azure" title="Azure">
+        <img src="images/dbx.png" alt="Databricks" title="Databricks">
+        <img src="images/talend.png" alt="Talend" title="Talend">
+      </div>
+    </div>
+  </div>
 
-			</div>
+  <!-- JavaScript for Consistent Scrolling -->
+  <script>
+    // Select the scrolling background element
+    const background = document.querySelector('.scrolling-background');
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    // Set the scroll speed (pixels per second)
+    const scrollSpeed = 10; // Adjust this value to control the speed
 
-	</body>
+    // Initialize the background position
+    let position = 0;
+
+    // Animation loop
+    function animateBackground() {
+      // Calculate the distance to move based on time elapsed
+      const now = performance.now(); // Get current timestamp
+      const delta = (now / 1000) * scrollSpeed; // Convert to seconds and scale by speed
+
+      // Update the background position
+      position = delta % (window.innerWidth * 3); // Ensure smooth looping based on screen width
+      background.style.backgroundPosition = `-${position}px 0`;
+
+      // Request the next frame
+      requestAnimationFrame(animateBackground);
+    }
+
+    // Start the animation
+    animateBackground();
+  </script>
+</body>
 </html>
