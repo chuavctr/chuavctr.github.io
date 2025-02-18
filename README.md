@@ -1,2 +1,3 @@
 # chuavctr.github.io
-This is gonna be hosting my portfolio website
+
+This repository will host my portfolio website.
